@@ -1,0 +1,46 @@
+body {
+  background-color: #f1f4f8;
+}
+
+.reg-card {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+.form-control:user-invalid,
+.form-select:user-invalid {
+  border-color: var(--bs-form-invalid-border-color);
+}
+
+.form-control:user-valid,
+.form-select:user-valid {
+  border-color: var(--bs-form-valid-border-color);
+}
+
+.form-control:user-invalid:focus,
+.form-select:user-invalid:focus {
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25);
+}
+
+.form-control:user-invalid ~ .invalid-feedback,
+.form-select:user-invalid ~ .invalid-feedback,
+.form-check-input:user-invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.form-check-input:user-invalid {
+  border-color: var(--bs-form-invalid-border-color);
+}
+
+.form-check-input:user-invalid ~ .form-check-label {
+  color: var(--bs-form-invalid-color);
+}
+
+.radio-group:has(.form-check-input:user-invalid) > .invalid-feedback {
+  display: block;
+}
+
+.input-group .form-control:user-invalid ~ .input-group-text {
+  border-color: var(--bs-form-invalid-border-color);
+}
